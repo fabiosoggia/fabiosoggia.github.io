@@ -1,0 +1,813 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+@font-face {
+    font-family: 'CaviarDreams-Bold';
+    src: url('fonts/caviar/Caviar_Dreams_Bold-webfont.eot');
+    src: url('fonts/caviar/Caviar_Dreams_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/caviar/Caviar_Dreams_Bold-webfont.woff') format('woff'),
+         url('fonts/caviar/Caviar_Dreams_Bold-webfont.ttf') format('truetype'),
+         url('fonts/caviar/Caviar_Dreams_Bold-webfont.svg#caviar_dreamsbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mono Social Icons';
+    src: url('fonts/monosocial/MonoSocialIconsFont-1.10.eot');
+    src: url('fonts/monosocial/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('fonts/monosocial/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('fonts/monosocial/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('fonts/monosocial/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('fonts/monosocial/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1;
+
+    color: #f7f7f7;
+    background-color: #db5858;
+}
+
+#hello-wrapper, #footer {
+    text-align: center;
+}
+
+body {
+    /* Necessario per posizionare (e centrare) gli elementi della pagina.
+     */
+    position: absolute;
+    min-height: 38em;
+    min-width: 320px;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+
+    /* La dimensione di default dovrebbe essere di 1em ma dato che il sito
+     * utilizza scritte molto grandi, sugli schermi piccoli è meglio
+     * avere una base più piccola.
+     * Questo valore sarà incrementato a 0.9em per gli schermi di media
+     * dimensione e poi a 1em per la versione desktop.
+     */
+    font-size: .8em;
+}
+
+.no-js body {
+    min-height: 72em;
+}
+
+a {
+    color: #fff;
+}
+
+
+
+/*
+ * Stile per il testo selezionato.
+ */
+
+::-moz-selection {
+    background: #473A4E;
+    text-shadow: none;
+}
+
+::selection {
+    background: #473A4E;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    position: fixed;
+    background: rgba(204, 21, 21, 0.44);
+    width: 96%;
+    padding: .5em 2%;
+    font-size: 1em;
+    top: 0;
+    margin: 0;
+    z-index: 999;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+#hello-wrapper {
+    /* Necessario per centrare gli elementi della pagina.
+     */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#hello .bt,
+#hello .social a {
+    background-color: rgba(255, 255, 255, .12);
+    display: inline-block;
+}
+
+#hello .bt:focus,
+#hello .social a:focus {
+    outline: 0;
+}
+
+#hello .bt {
+    text-decoration: none;
+    line-height: 4em;
+}
+
+#hello .bt:focus,
+#hello .bt:hover {
+    background-color: rgba(255, 255, 255, .34);
+}
+
+#hello h1 {
+    font-family: 'CaviarDreams-Bold';
+    font-weight: normal;
+    text-transform: lowercase;
+    font-size: 4em;
+    margin: 0 auto;
+
+    max-width: 6em;
+}
+
+
+#hello p {
+    font-family: 'Lato';
+    font-size: 1em;
+    width: 96%;
+    margin: 2em auto 1em auto;
+    min-height: 4em;
+    text-rendering: optimizeLegibility;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+.no-js #hello p {
+    text-align: justify;
+    width: 80%;
+    max-width: 1024px;
+    color: rgba(255, 255, 255, .6);
+}
+
+.no-js #hello p b {
+    color: #fff;
+}
+
+h1:before, h1:after, p:before, p:after {
+    font-family: 'Consolas', 'Menlo', 'Inconsolata';
+    color: rgba(255, 255, 255, .20);
+}
+
+h1:before, h1:after {
+    font-size: .6em;
+}
+
+h1:before {
+    content: '<h1> ';
+}
+
+h1:after {
+    content: ' </h1>';
+}
+
+.js #hello p:before {
+    content: '> ';
+}
+
+#hello .cv {
+    min-width: 19em;
+    margin: 1em 0;
+}
+
+#contact {
+    margin-top: 1em;
+    padding: 0;
+    white-space-collapsing: discard;
+}
+
+#contact li {
+    display: inline-block;
+    margin: 0.5em;
+}
+
+#contact a {
+    font-size: 3em;
+    line-height: 1.34em;
+    width: 1.34em;
+    text-decoration: none;
+    text-rendering: geometricPrecision;
+}
+
+
+
+.social {
+    font-family: 'Mono Social Icons';
+    list-style: none;
+
+    text-decoration: none;
+}
+
+.fb-icon:before {
+    content: '\e027';
+}
+
+.fb-icon:focus,
+.fb-icon:hover {
+    background-color: #3b5998 !important;
+}
+
+.ln-icon:before {
+    content: '\e052';
+}
+
+.ln-icon:focus,
+.ln-icon:hover {
+    background-color: #0977b5 !important;;
+}
+
+.be-icon:before {
+    content: '\e009';
+}
+
+.be-icon:focus,
+.be-icon:hover {
+    background-color: #1769ff !important;;
+}
+
+.gh-icon:before {
+    content: '\e037';
+}
+
+.gh-icon:focus,
+.gh-icon:hover {
+    background-color: #333 !important;;
+}
+
+.tw-icon:before {
+    content: '\e086';
+}
+
+.tw-icon:focus,
+.tw-icon:hover {
+    background-color: #00aced !important;;
+}
+
+.em-icon:before {
+    content: '\e024';
+}
+
+.em-icon:focus,
+.em-icon:hover {
+    background-color: #FFAA36 !important;
+}
+
+#footer {
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 4em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-rendering: optimizeLegibility;
+}
+
+/*
+ * Fadein effect.
+ */
+
+.js #hello h1,
+.js #hello p,
+.js #hello a,
+.cssanimations #hello h1,
+.cssanimations #hello p,
+.cssanimations #hello a {
+    opacity: 0;
+}
+
+#hello h1,
+#hello p,
+#hello a {
+    -webkit-animation: fadein 1s 1 forwards;
+    -moz-animation: fadein 1s 1 forwards;
+    -ms-animation: fadein 1s 1 forwards;
+    -o-animation: fadein 1s 1 forwards;
+    animation: fadein 1s 1 forwards;
+}
+
+#hello p {
+    -webkit-animation-delay: .25s !important;
+    -moz-animation-delay: .25s !important;
+    -o-animation-delay: .25s !important;
+    animation-delay: .25s !important;
+}
+
+#hello .cv {
+    -webkit-animation-delay: .5s !important;
+    -moz-animation-delay: .5s !important;
+    -o-animation-delay: .5s !important;
+    animation-delay: .5s !important;
+}
+
+#hello .gh-icon {
+    -webkit-animation-delay: .40s !important;
+    -moz-animation-delay: .40s !important;
+    -o-animation-delay: .40s !important;
+    animation-delay: .40s !important;
+}
+
+#hello .ln-icon {
+    -webkit-animation-delay: .50s !important;
+    -moz-animation-delay: .50s !important;
+    -o-animation-delay: .50s !important;
+    animation-delay: .50s !important;
+}
+
+#hello .be-icon {
+    -webkit-animation-delay: .60s !important;
+    -moz-animation-delay: .60s !important;
+    -o-animation-delay: .60s !important;
+    animation-delay: .60s !important;
+}
+
+#hello .fb-icon {
+    -webkit-animation-delay: .70s !important;
+    -moz-animation-delay: .70s !important;
+    -o-animation-delay: .70s !important;
+    animation-delay: .70s !important;
+}
+
+#hello .tw-icon {
+    -webkit-animation-delay: .80s !important;
+    -moz-animation-delay: .80s !important;
+    -o-animation-delay: .80s !important;
+    animation-delay: .80s !important;
+}
+
+#hello .em-icon {
+    -webkit-animation-delay: .90s !important;
+    -moz-animation-delay: .90s !important;
+    -o-animation-delay: .90s !important;
+    animation-delay: .90s !important;
+}
+
+@-webkit-keyframes fadein {
+    from  {
+        -webkit-transform: translate(0, 24px);
+        transform: translate(0, 24px);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    from  {
+        -moz-transform: translate(0, 24px);
+        transform: translate(0, 24px);
+        opacity: 0;
+    }
+    to {
+        -moz-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadein {
+    from  {
+        -ms-transform: translate(0, 24px);
+        transform: translate(0, 24px);
+        opacity: 0;
+    }
+    to {
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+    from  {
+        -o-transform: translate(0, 24px);
+        transform: translate(0, 24px);
+        opacity: 0;
+    }
+    to {
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from  {
+        transform: translate(0, 24px);
+        transform: translate(0, 24px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+/*
+ * Background effect.
+ */
+
+body {
+    -webkit-animation: colorful 180s infinite;
+    -moz-animation: colorful 180s infinite;
+    -o-animation: colorful 180s infinite;
+    animation: colorful 180s infinite;
+}
+
+@-webkit-keyframes colorful {
+    /* Grigio: non utilizzato.
+    80% { background: #3E4240; }
+    */
+
+    /* Rosso */
+    0%  { background: #DB5858; }
+    /* Giallo */
+    20% { background: #c2be4e; }
+    /* Verde */
+    40% { background: #6EC275; }
+    /* Azzurro */
+    60% { background: #58A7DB; }
+    /* Viola */
+    80% { background: #744175; }
+}
+
+@-moz-keyframes colorful {
+    0%  { background: #DB5858; }
+    20% { background: #c2be4e; }
+    40% { background: #6EC275; }
+    60% { background: #58A7DB; }
+    80% { background: #744175; }
+}
+
+@-o-keyframes colorful {
+    0%  { background: #DB5858; }
+    20% { background: #c2be4e; }
+    40% { background: #6EC275; }
+    60% { background: #58A7DB; }
+    80% { background: #744175; }
+}
+
+@-keyframes colorful {
+    0%  { background: #DB5858; }
+    20% { background: #c2be4e; }
+    40% { background: #6EC275; }
+    60% { background: #58A7DB; }
+    80% { background: #744175; }
+}
+
+/*
+ * Typing effect
+ */
+
+#typed-cursor {
+    opacity: 1;
+    font-weight: 100;
+    -webkit-animation: blink 1s ease infinite;
+    -moz-animation: blink 1s ease infinite;
+    -o-animation: blink 1s ease infinite;
+    animation: blink 1s ease infinite;
+}
+
+@-webkit-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-o-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-keyframes blink{
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*
+ * In una struttura del tipo .ext-box > .int-box, allinea .int-box veriticalmente
+ * all'interno di .ext-box.
+ */
+.ext-box { display: table; }
+.int-box { display: table-cell; vertical-align: middle; }
+
+/* ==========================================================================
+   Responsive Design. Mobile first.
+   ========================================================================== */
+
+@media only screen and (min-width: 38em) {
+
+    body {
+        font-size: .9em;
+    }
+
+    #hello h1 {
+        font-size: 5em;
+    }
+
+    .js #hello p:before {
+        content: '<!-- ';
+    }
+
+    .js #hello p:after {
+        content: ' -->';
+    }
+
+
+}
+
+@media only screen and (min-width: 57em) {
+
+    body {
+        font-size: 1em;
+    }
+
+    #hello-wrapper {
+        margin: auto;
+    }
+
+    .no-js #hello p {
+        width: 50%;
+    }
+
+    #hello p {
+        min-height: 1em;
+    }
+
+    .js #hello p:before {
+        content: '<p> ';
+    }
+
+    .js #hello p:after {
+        content: ' </p>';
+    }
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
