@@ -11,7 +11,7 @@ $(function(){
 				'I\'m Fabio.',
 				'Nice to meet you!',
 				'I\'m a developer from Piedimonte Matese, Italy.',
-				'I\'ve got a Master degree in Computer Science, in 2015.'
+				'I\'ve got a Master degree in Computer Science, in 2015.',
 				'I\'m very passionate about technology.',
 				'I can code in many programming languages since I was young. ^1000 Really!',
 				'I love reading, music and much more.',
